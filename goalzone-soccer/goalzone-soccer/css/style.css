@@ -201,7 +201,9 @@ footer {
     flex-direction: column; 
 }
   nav a {
-     text-align: center; width: 100%; 
+     text-align: center; 
+     width: 100%; 
+
     }
 
   .product-grid { 

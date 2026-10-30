@@ -3,190 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!--LInking the PAGE  with the CSS class-->
+    <link rel="stylesheet" href="CSS/style.css">
+    
     <title>Soccer-Zone | Enquiry</title>
-</head>
+
+    head>
 <body>
-    
-
-    <!--===================-->
-    <!--The Logo Image-->
-    <!--====================-->
-
-    <header>
-
-        
-    <p>
-        <img src="images/logo.png"
-            alt="Goal-Zone Soccer Logo"
-            width="300">
-    </p>
-
-     <h1>Make an Enquiry</h1>
-
-        <p>
-            <em>Tell us what you are looking for.</em>
-        </p>
-
-        <hr>
-
-    </header>
-
-        <!-- ========================= -->
-    <!-- NAVIGATION -->
-    <!-- ========================= -->
-
-     <nav>
-        <a href = "index.html">Home</a>
-        &nbsp;  | &nbsp;
-        <a href = "about.html">About Us</a>
-         &nbsp;  | &nbsp;
-        <a href = "products.html">Soccer Boots</a> 
-          &nbsp;  | &nbsp;
-        <a href = "enquiry.html">Order Here</a>
-          &nbsp;  | &nbsp;
-        <a href ="contacts.html">Contact</a>  
-
-    </nav>
-    
-    <hr>
-
-    <!-- ========================= -->
-    <!-- enquiry section code -->
-    <!-- ========================= -->
-
-    <main>
-
-        <section>
-
-            <h2>Product Enquiry Form</h2>
-
-            <p>
-                Complete the form below and we will contact you.
-            </p>
-
-            <hr>
-
-            <form>
-
-                <!-- Personal Information -->
-                <section>
-
-                    <h3>Personal Information</h3>
-
-                    <p>
-
-                        <label for="fullname">
-                            Full Name:
-                        </label>
-
-                        <br>
-
-                        <input type="text"
-                               id="fullname"
-                               name="fullname"
-                               placeholder="Enter your full name">
-
-                    </p>
-
-                    <p>
-
-                        <label for="email">
-                            Email Address:
-                        </label>
-
-                        <br>
-
-                        <input type="email"
-                               id="email"
-                               name="email"
-                               placeholder="Enter your email address">
-
-                    </p>
-
-                    <p>
-                        
-                        <label for="phone">
-                            Telephone Number:
-                        </label>
-
-                        <br>
-
-                        <input type="tel"
-                               id="phone"
-                               name="phone"
-                               placeholder="Enter your phone number">
-
-                    </p>
-
-                </section>
-
-                <!-- Order Information -->
-                <section>
-
-                    <h3>Order Information</h3>
-
-                    <p>
-
-                        <label for="quantity">
-                            Number of Items:
-                        </label>
-
-                        <br>
-
-                        <input type="number"
-                               id="quantity"
-                               name="quantity"
-                               min="1"
-                               max="80">
-
-                    </p>
-
-                    <p>
-
-                        <label for="eventdate">
-                            Event Date:
-                        </label>
-
-                        <br>
-
-                        <input type="date"
-                               id="eventdate"
-                               name="eventdate">
-
-                    </p>
-
-
-                    <!--OPTIONS FOR PURCHASING-->
-                    <p>
-
-                        <label for="product">Choose your soccer boots:</label>
-                            Product:
-                        
-                            <select id="product" name="product">
-
-                                <option value="speed-pro">
-                                    Speed Pro-Boots
-                                </option>
-
-                                <option value="elite-control">
-                                    Elite Control-Boots
-                                </option>
-
-                                <option value="pro-strike">
-                                    Pro Strike Boots
-                                </option>
-                                
-                                <option value="power-flex">
-                                    Power Flex Boots
-                                </option>
-
-                            </select>
-
-                            </p>
-
-
-                        
-
-
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Soccer-Zone home">
+    <img src="images/logo.png" alt="Soccer-Zone football shop logo">
+    <span><strong>Soccer-Zone</strong><small>Comfortable boots you can trust</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a><a href="about.html">About Us</a>
+    <a href="products.html">Soccer Boots</a><a href="enquiry.html">Enquire / Order</a>
+    <a href="contacts.html">Contact</a>
+  </nav>
+</header>
+<main class="page-main">
+  <section class="page-intro"><p class="eyebrow">PRODUCT SUPPORT</p><h1>Make a product enquiry</h1><p>Tell us which boots you are interested in. The form will calculate an estimated amount before you send your enquiry.</p></section>
+  <form id="enquiry-form" class="form-card" novalidate>
+    <h2>Your details</h2>
+    <div class="form-grid">
+      <div class="form-field"><label for="enquiry-name">Full name *</label><input id="enquiry-name" name="name" type="text" minlength="2" maxlength="70" autocomplete="name" required></div>
+      <div class="form-field"><label for="enquiry-email">Email address *</label><input id="enquiry-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="form-field"><label for="enquiry-phone">Phone number *</label><input id="enquiry-phone" name="phone" type="tel" inputmode="tel" pattern="[0-9+() -]{7,20}" placeholder="+27..." required></div>
+    </div>
+    <h2>Product details</h2>
+    <div class="form-grid">
+      <div class="form-field"><label for="enquiry-product">Choose your soccer boots *</label><select id="enquiry-product" name="product" required><option value="">Select a product</option><option value="Speed Pro Boots">Speed Pro Boots — R899</option><option value="Elite Control Boots">Elite Control Boots — R1,199</option><option value="Pro Strike Boots">Pro Strike Boots — R1,499</option></select></div>
+      <div class="form-field"><label for="enquiry-quantity">Number of pairs *</label><input id="enquiry-quantity" name="quantity" type="number" min="1" max="20" value="1" required></div>
+      <div class="form-field"><label for="enquiry-date">Date needed (optional)</label><input id="enquiry-date" name="date" type="date"></div>
+    </div>
+    <div class="estimate-panel" aria-live="polite"><strong>Estimated total:</strong> <span id="estimate-total">Select a product</span><p id="estimate-note">This is an estimate only. We will confirm availability and the final price.</p></div>
+    <div class="form-field"><label for="enquiry-message">Extra information (optional)</label><textarea id="enquiry-message" name="message" rows="4" maxlength="500" placeholder="Tell us about size, colour or any other request."></textarea></div>
+    <button class="button" type="submit">Prepare my enquiry</button>
+    <p id="enquiry-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+    <p class="small-note">After validation, your email application will open with the enquiry details ready to send to info@soccerzone.co.za.</p>
+  </form>
+</main>
+<footer class="site-footer">
+  <p><strong>Soccer-Zone</strong> · Polokwane, South Africa</p>
+  <p>Email: <a href="mailto:info@soccerzone.co.za">info@soccerzone.co.za</a> | Phone: +27 22 824 6349</p>
+  <p>&copy; <span id="current-year">2026</span> Soccer-Zone. All rights reserved.</p>
+</footer>
+<script src="js/script.js" defer></script>
 </body>
 </html>
+

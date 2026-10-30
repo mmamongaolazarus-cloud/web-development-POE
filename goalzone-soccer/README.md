@@ -511,6 +511,114 @@ Update changelog and references
 
 ---
 
+# Soccer-Zone Website — Part 3
+
+
+The website uses **HTML5, CSS3 and plain JavaScript**. No framework or installation is required.
+
+## Pages
+| File | Purpose |
+|---|---|
+| `index.html` | Home page and links to the main sections |
+| `about.html` | Business information and interactive FAQ accordion |
+| `products.html` | Product catalogue with search, sorting and image lightbox |
+| `enquiry.html` | Product enquiry form with a price estimate |
+| `contacts.html` | General contact form and Polokwane map |
+
+## Folder structure
+```text
+GoalZone_Soccer_Part3/
+├── index.html
+├── about.html
+├── products.html
+├── enquiry.html
+├── contacts.html
+├── robots.txt
+├── sitemap.xml
+├── README.md
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── images/
+    ├── logo.png
+    ├── welcome.png
+    └── product photographs...
+```
+
+
+
+## Part 3 functionality
+- **Mobile navigation:** the Menu button opens and closes the navigation on smaller screens.
+- **FAQ accordion:** questions on the About page expand and collapse.
+- **Dynamic products:** JavaScript creates the product cards from a product data array.
+- **Search and sorting:** customers can filter products by name, description or playing style and sort by price or name.
+- **Image lightbox:** selecting a product image opens a larger preview. Previous/next buttons, arrow keys and Escape are supported.
+- **Enquiry estimate:** selecting a product and quantity calculates an estimated total using the displayed product prices.
+- **Enquiry validation:** required fields, email format, phone number pattern and quantity range are checked before the email is prepared.
+- **Contact validation:** required contact details, message type and message length are checked before the email is prepared.
+- **Map:** the Contact page embeds a map showing Polokwane.
+
+## Form and email behaviour
+The enquiry and contact forms validate the entered information in the browser. After successful validation, JavaScript builds an email with the form details and opens the visitor's default email application using a `mailto:` link. The visitor must review and press **Send** in that email application.
+
+
+
+## SEO work
+- Each page has its own descriptive title and meta description.
+- Relevant keywords are included in the page metadata and visible page content.
+- Heading levels are used to organise the content.
+- Images use descriptive file names where supplied and meaningful alternative text.
+- Internal navigation links connect all five pages.
+- Responsive CSS supports desktop, tablet and mobile screen sizes.
+- `robots.txt` gives crawler instructions.
+- `sitemap.xml` lists the website pages. If the site is published under a different web address, update the sitemap URLs and the Sitemap line in `robots.txt` to match the final published address.
+- Product images are loaded only when needed where supported (`loading="lazy"`).
+
+## Changelog — Part 3
+The following changes were made after reviewing the Part 2 rubric feedback and the Part 3 instructions.
+
+| Area | Change made |
+|---|---|
+| Part 2 feedback — external CSS | Standardised all pages to use the same external file at `css/style.css`. Removed inconsistent uppercase/lowercase CSS paths and the temporary inline product styles. |
+| Part 2 feedback — typography and layout | Kept a consistent font, heading hierarchy, spacing, card styling and readable text sizes across the pages. |
+| Part 2 feedback — responsive design | Improved the responsive layout for navigation, product cards, forms, content sections and the contact map. |
+| Part 2 feedback — navigation | Added one consistent navigation menu to all pages and a working mobile menu. |
+| Part 2 feedback — README and documentation | Replaced the old project notes with this updated README, including setup steps, features, form behaviour and a detailed changelog. |
+| JavaScript file correction | Standardised the script file name to `js/script.js` and linked it from every page. This fixes the old `scrip.js` / `script.js` mismatch. |
+| Interactive elements | Added an expandable FAQ accordion and a mobile navigation toggle. |
+| Interactive map | Kept and improved the embedded Polokwane map on the Contact page, including a descriptive title and lazy loading. |
+| Gallery lightbox | Added a full-screen image preview with close, previous and next controls, keyboard support and a caption. |
+| Dynamic content | Added a JavaScript product array. Product cards are created dynamically instead of being repeated manually in the HTML. |
+| Search and sort | Added live product filtering and sorting by price or product name. |
+| SEO | Added unique page titles, meta descriptions and keywords, descriptive headings, image alternative text, internal links, `robots.txt` and `sitemap.xml`. |
+| Enquiry form | Added required fields, input constraints, phone validation, quantity limits, a live price estimate and a prepared email containing the product enquiry. |
+| Contact form | Added required contact fields, message type selection, message-length validation and a prepared email containing the complete general message. |
+| Accessibility | Added form labels, status messages, keyboard controls, descriptive image text and accessible states for the accordion and mobile menu. |
+
+
+## Publishing / deployment
+The project is prepared as a static website and can be deployed using GitHub Pages or Netlify.
+
+
+
+**Deployment status:** the website files are prepared for deployment. Publishing to GitHub Pages or Netlify and pushing commits require access to the owner's GitHub/Netlify account, so those account actions must be completed by the repository owner.
+
+## References
+- MDN Web Docs. (n.d.). *HTML: HyperText Markup Language*. https://developer.mozilla.org/en-US/docs/Web/HTML
+- MDN Web Docs. (n.d.). *CSS: Cascading Style Sheets*. https://developer.mozilla.org/en-US/docs/Web/CSS
+- MDN Web Docs. (n.d.). *JavaScript*. https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- MDN Web Docs. (n.d.). *Client-side form validation*. https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+- Google Search Central. (n.d.). *SEO Starter Guide*. https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+- Google Search Central. (n.d.). *Build and submit a sitemap*. https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+- W3C. (n.d.). *Web Content Accessibility Guidelines (WCAG) 2.2*. https://www.w3.org/TR/WCAG22/
+- The Independent Institute of Education (Pty) Ltd. (2026). *WEDES020 POE: Part 3 — Enhancing Functionality and SEO* (student-provided assignment instructions).
+- The Independent Institute of Education (Pty) Ltd. (2026). *Part 2 rubric feedback* (student-provided feedback document).
+
+---
+
+
+
 # 12. References
 
 The following technical sources were used as references for the website development:

@@ -1,4 +1,4 @@
- SOCCER-ZONE - PART 3 JAVASCRIPT
+ SOCCER-ZONE
    /*This file controls the interactive features on the website.
    It uses plain JavaScript so that it is easy to understand.
    ========================================================= */

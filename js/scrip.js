@@ -1,5 +1,4 @@
- SOCCER-ZONE
-   /*This file controls the interactive features on the website.
+ /* This file controls the interactive features on the website.
    It uses plain JavaScript so that it is easy to understand.
    ========================================================= */
 
@@ -221,7 +220,8 @@ document.addEventListener("DOMContentLoaded", function () {
         lightboxCaption.textContent = selectedImage.getAttribute("data-caption") || selectedImage.alt;
         lightbox.hidden = false;
         document.body.style.overflow = "hidden";
-        lightbox.querySelector(".lightbox-close").focus();
+        var closeButton = lightbox.querySelector(".lightbox-close");
+        if (closeButton) closeButton.focus();
     }
 
     function closeLightbox() {
@@ -253,13 +253,12 @@ document.addEventListener("DOMContentLoaded", function () {
     attachGalleryEvents();
 
     if (lightbox) {
-        lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
-        lightbox.querySelector(".lightbox-prev").addEventListener("click", function () {
-            showNextImage(-1);
-        });
-        lightbox.querySelector(".lightbox-next").addEventListener("click", function () {
-            showNextImage(1);
-        });
+        var closeButton = lightbox.querySelector(".lightbox-close");
+        var previousButton = lightbox.querySelector(".lightbox-prev");
+        var nextButton = lightbox.querySelector(".lightbox-next");
+        if (closeButton) closeButton.addEventListener("click", closeLightbox);
+        if (previousButton) previousButton.addEventListener("click", function () { showNextImage(-1); });
+        if (nextButton) nextButton.addEventListener("click", function () { showNextImage(1); });
 
         // Close the image preview with Escape and allow arrow-key navigation.
         document.addEventListener("keydown", function (event) {
@@ -287,7 +286,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var productPrices = {
         "Speed Pro Boots": 899,
         "Elite Control Boots": 1199,
-        "Pro Strike Boots": 1499
+        "Pro Strike Boots": 1499,
+        "Defender Boots": 999,
+        "Lightweight Boots": 1099,
+        "Attacker Boots": 1299,
+        "Winger Boots": 1149,
+        "Midfielder Boots": 1049,
+        "Runner Boots": 949
     };
     var enquiryProduct = document.getElementById("enquiry-product");
     var enquiryQuantity = document.getElementById("enquiry-quantity");
